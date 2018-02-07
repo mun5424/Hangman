@@ -1,0 +1,31 @@
+body { 
+    background-color: #000;
+
+}
+.jumbotron{
+    background-color: rgb(230, 230, 231);
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.jumbotron img { 
+    margin-bottom: 20px;
+}
+
+
+#content {
+    border: 5px solid white;
+    color: white;
+    text-align: center; 
+    padding: 20px;
+    line-height: 40px;
+}
+
+#game {
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-decoration-style: auto;
+
+}
