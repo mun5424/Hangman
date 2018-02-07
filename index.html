@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js" async></script>
     <title>Hangman Hiphop</title>
 </head>
 
@@ -24,17 +25,30 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="col-lg-6">
+
+    <div class="container-content">
+        <div class="row">
+            <div class="col-md-6">
                 <div id="artist">
-                        <p>PRESS ANY KEY TO GUESS A LETTER </p> 
-                        <p id="answer"> KENDRICK LAMAR </p> 
+                    <img src="assets/images/avatar.png">
+                    <p id="artist-caption"> Who could it be?  </p>
                 </div>
+            </div>
+
+            <div class="col-md-6">
                 <div id="game">
-                        <p>PRESS ANY KEY TO GUESS A LETTER </p> 
-                        <p id="answer"> KENDRICK LAMAR </p> 
+                        <p>PRESS ANY KEY TO GUESS A LETTER </p>
+                        <p id="answer"> _ _ _ _ _ _ _ </p>
+                        <br> 
+                        <p>Number of Guesses Remaining </p>
+                        <p id="guesses-remaining">10</p>
+                        
+                        <p>Letters already guessed</p>
+                        <p id="wrong-guess">  </p>
                 </div>
+            </div>
         </div>
+    </div>
 
     </div>
 </body>

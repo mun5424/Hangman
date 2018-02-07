@@ -14,18 +14,17 @@ body {
 }
 
 
-#content {
+.container-content {
+    overflow: hidden;   
+    WIDTH: 900px;
+    margin: auto;   
+}
+
+#artist, #game {
     border: 5px solid white;
     color: white;
     text-align: center; 
     padding: 20px;
-    line-height: 40px;
-}
-
-#game {
-    font-size: 20px;
-    letter-spacing: 5px;
-    text-decoration: underline;
-    text-decoration-style: auto;
-
+    line-height: 30px;
+    height: 350px;
 }
