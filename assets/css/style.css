@@ -14,17 +14,57 @@ body {
 }
 
 
+
 .container-content {
     overflow: hidden;   
-    WIDTH: 900px;
+    WIDTH: 980px;
     margin: auto;   
+    display: none;
 }
 
 #artist, #game {
     border: 5px solid white;
     color: white;
     text-align: center; 
-    padding: 20px;
     line-height: 30px;
-    height: 350px;
+    height: 400px;
+}
+
+#game {
+    padding-top: 20px;
+}
+
+
+#win-count { 
+    position: absolute;
+    width: 100px;
+    bottom: 15px;
+    right: 40px; 
+}
+
+#guesses, #guesses-remaining, #wrong-guesses {
+    font-size: 25px;
+    font-weight: bold;
+    white-space: pre;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    
+    #logo { 
+        max-width: 80%;
+    }
+    .jumbotron { 
+        width: 100%; 
+    }
+
+.container-content {
+    width: 90%; 
+
+}
+    #artist, #game {
+        margin: 20px 20px 20px 20px;
+        padding: auto;
+    }
 }

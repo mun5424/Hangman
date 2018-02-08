@@ -9,6 +9,8 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="text/javascript" src="assets/javascript/game.js" async></script>
+    <script src="https://www.youtube.com/iframe_api" async></script>
+    <script src="https://cdn.rawgit.com/labnol/files/master/yt.js" async></script>
     <title>Hangman Hiphop</title>
 </head>
 
@@ -17,10 +19,10 @@
         <div class="col-lg-12">
 
             <div class="jumbotron">
-                <img src="assets/images/logo.png">
+                <img id="logo" src="assets/images/logo.png">
                 <p>Guess a Hiphop Artist! </p>
                 <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Start Game</a>
+                    <a class="btn btn-primary btn-lg" id ="start-button" onclick="RunGame()">Start Game</a>
                 </p>
             </div>
         </div>
@@ -30,21 +32,25 @@
         <div class="row">
             <div class="col-md-6">
                 <div id="artist">
-                    <img src="assets/images/avatar.png">
+                    <!--> <img src="assets/images/avatar.png"> <!-->
                     <p id="artist-caption"> Who could it be?  </p>
+                    <div id="youtube">
+                            <iframe width="200" height="90" src="https://www.youtube.com/embed/QjlFqgRbICY?start=50&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                    <p id="win-count"> Wins: 0  </p>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div id="game">
                         <p>PRESS ANY KEY TO GUESS A LETTER </p>
-                        <p id="answer"> _ _ _ _ _ _ _ </p>
+                        <p id="guesses"></p>
                         <br> 
                         <p>Number of Guesses Remaining </p>
                         <p id="guesses-remaining">10</p>
                         
                         <p>Letters already guessed</p>
-                        <p id="wrong-guess">  </p>
+                        <p id="wrong-guesses"></p>
                 </div>
             </div>
         </div>
