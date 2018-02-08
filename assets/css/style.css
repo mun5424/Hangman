@@ -13,6 +13,9 @@ body {
     margin-bottom: 20px;
 }
 
+#start-button {
+    color: white; 
+}
 
 
 .container-content {
@@ -28,6 +31,30 @@ body {
     text-align: center; 
     line-height: 30px;
     height: 400px;
+    padding-top: 10px;
+}
+
+#artist-img-container {
+    width: 90%; 
+    text-align: center; 
+    margin: auto;
+    height: 250px;
+}
+
+#artist-caption {
+    margin-bottom: 5px;
+}
+
+#artist-image {
+    max-width: 300px; 
+    max-height: 250px;
+    line-height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    vertical-align: middle;
 }
 
 #game {

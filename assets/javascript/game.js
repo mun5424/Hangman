@@ -1,6 +1,6 @@
 
 
-var artists = ["KENDRICK LAMAR", "DRAKE", "JAYZ", "CARDI B", "ASAP ROCKY", "KANYE WEST", "MEEK MILL", "MIKE JONES", "CHRIS BROWN", "BUSTA RHYMES", "LIL WAYNE", "EMINEM", "SNOOP DOGG", "LUDACRIS", "DRDRE", "NAS", "NICKI MINAJ", "TUPAC SHAKUR", "TYGA"];
+var artists = ["KENDRICK LAMAR", "DRAKE", "JAY Z", "CARDI B", "ASAP ROCKY", "KANYE WEST", "MEEK MILL", "MIKE JONES", "CHRIS BROWN", "BUSTA RHYMES", "LIL WAYNE", "EMINEM", "SNOOP DOGG", "LUDACRIS", "DR DRE", "NAS", "NICKI MINAJ", "TUPAC SHAKUR", "TYGA"];
 var winCount = 0;
 
 var artist = "";
@@ -8,6 +8,28 @@ var artistLongString = "";
 var underscoreString = "";
 var gameIsRunning = false;
 
+var youtubeTags = 
+{
+    "KENDRICK LAMAR": "QjlFqgRbICY",
+    "DRAKE" : "jIFajIQRRak",
+    "JAY Z" : "fklotOPfGUc",
+    "CARDI B": "Z3G8YUDU0ZU",
+    "ASAP ROCKY": "7EmGuzoNJYc",
+    "KANYE WEST": "Qci1KpwwJ-s",
+    "MEEK MILL": "J03cag5Lf4s",
+    "MIKE JONES": "x6O59VnvsMY", 
+    "CHRIS BROWN": "uRljCiZIios",
+     "BUSTA RHYMES": "lJg1rT_-BIc",
+     "LIL WAYNE": "p8Z4BZenHG4", 
+     "EMINEM": "49rraTkHFeI",
+    "SNOOP DOGG": "0vhnncsYNF8" ,
+     "LUDACRIS": "KvP7aDJHMog",
+    "DR DRE": "jiKiAjm83XA",
+     "NAS": "VbHvrw5u3Fc", 
+     "NICKI MINAJ": "qxQHC8lu9T4", 
+     "TUPAC SHAKUR": "UsE3fVEbuo8", 
+     "TYGA" : "VXXHlsoBS2k"
+}
 
 
 //function RunGame() {
@@ -16,11 +38,28 @@ function RunGame() {
     gameIsRunning = true; 
     var container = document.getElementsByClassName("container-content"); 
     container[0].style.display = "block";
+    var startButton = document.getElementById("start-button");
+    startButton.innerText = "Play Again";
     artist = artists[Math.floor(Math.random() * artists.length)];
-    var remainingGuesses = 10;
     hangmanString(artist);
+    
+    var artistName = document.getElementById("artist-caption");
+    artistName.innerText = "Who could it be?";
+
+    var artistImage = document.getElementById("artist-image"); 
+    artistImage.src = "assets/images/avatar.png"; 
+
+    var youtube = document.getElementById("youtube");
+    youtube.style.display = "none"
+
     var guess = document.getElementById("guesses");
     guess.innerHTML = underscoreString; 
+    var numGuesses = document.getElementById("guesses-remaining");
+    numGuesses.innerHTML = 10; 
+    var wrongGuess = document.getElementById("wrong-guesses");
+    wrongGuess.innerHTML = ""; 
+    var wrongInput = document.getElementById("wrong-input");
+    wrongInput.innerHTML = ""; 
 }
 
 
@@ -86,13 +125,22 @@ function ReplaceCharacter(string, index, char) {
 function displayEndResults(artist) {
     var artistName = document.getElementById("artist-caption");
     artistName.innerText = "It's " + artist + " ! ";
+    var artistImage = document.getElementById("artist-image"); 
+    artistImage.src = "assets/images/" + artist + ".jpg";
     var wins = document.getElementById("win-count");
     wins.innerText = "Wins: " + ++winCount; 
+    
+    var youtube = document.getElementById("youtube");
+    youtube.style.display = "block";
+    var video = document.getElementById("iframe-id");
+    video.src = "https://www.youtube.com/embed/" + youtubeTags[artist] + "?start=55&autoplay=1";
+
 }
 
 function displayLossResults() {
     var artistName = document.getElementById("artist-caption");
     artistName.innerHTML = "YOU LOSE! NO MORE GUESSES REMAINING. <br> PRESS START GAME TO PLAY AGAIN " ;
+     
 }
 
 
@@ -106,6 +154,11 @@ document.onkeyup = function (event) {
         if (charCode > 64 && charCode < 91)
         {
             guessLetter(userGuess);
+        }
+        else 
+        {
+            var wrongInput = document.getElementById("wrong-input");
+            wrongInput.innerText = userGuess + " is not a valid letter. Use only A~Z to Guess!"
         }
 
     }

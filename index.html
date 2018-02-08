@@ -32,10 +32,12 @@
         <div class="row">
             <div class="col-md-6">
                 <div id="artist">
-                    <!--> <img src="assets/images/avatar.png"> <!-->
-                    <p id="artist-caption"> Who could it be?  </p>
+                    <div id="artist-img-container"> 
+                        <img id="artist-image" src="assets/images/avatar.png">
+                    </div>
+                   <p id="artist-caption"> Who could it be?  </p>
                     <div id="youtube">
-                            <iframe width="200" height="90" src="https://www.youtube.com/embed/QjlFqgRbICY?start=50&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe width="200" height="90" id="iframe-id" src="https://www.youtube.com/embed/QjlFqgRbICY?start=50&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                       </div>
                     <p id="win-count"> Wins: 0  </p>
                 </div>
@@ -51,6 +53,7 @@
                         
                         <p>Letters already guessed</p>
                         <p id="wrong-guesses"></p>
+                        <p id="wrong-input"></p>
                 </div>
             </div>
         </div>
