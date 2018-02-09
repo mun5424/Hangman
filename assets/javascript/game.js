@@ -53,7 +53,7 @@ function RunGame() {
     var guess = document.getElementById("guesses");
     guess.innerHTML = underscoreString; 
     var numGuesses = document.getElementById("guesses-remaining");
-    numGuesses.innerHTML = 10; 
+    numGuesses.innerHTML = 7; 
     var wrongGuess = document.getElementById("wrong-guesses");
     wrongGuess.innerHTML = ""; 
     var wrongInput = document.getElementById("wrong-input");
