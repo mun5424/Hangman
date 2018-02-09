@@ -19,7 +19,7 @@ var youtubeTags =
     "MEEK MILL": "J03cag5Lf4s",
     "MIKE JONES": "U-krqF1DVUg", 
     "CHRIS BROWN": "KZdwPP1NWPo",
-     "BUSTA RHYMES": "lJg1rT_-BIc",
+     "BUSTA RHYMES": "jQvYY9ok-to",
      "LIL WAYNE": "p8Z4BZenHG4", 
     "SNOOP DOGG": "kI-o24BpKE0" ,
      "LUDACRIS": "KvP7aDJHMog",
