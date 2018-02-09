@@ -1,6 +1,6 @@
 
 
-var artists = ["KENDRICK LAMAR", "DRAKE", "JAY Z", "CARDI B", "ASAP ROCKY", "KANYE WEST", "MEEK MILL", "MIKE JONES", "CHRIS BROWN", "BUSTA RHYMES", "LIL WAYNE", "EMINEM", "SNOOP DOGG", "LUDACRIS", "DR DRE", "NAS", "NICKI MINAJ", "TUPAC SHAKUR", "TYGA"];
+var artists = ["KENDRICK LAMAR", "DRAKE", "JAY Z", "CARDI B", "ASAP ROCKY", "KANYE WEST", "MEEK MILL", "MIKE JONES", "CHRIS BROWN", "BUSTA RHYMES", "LIL WAYNE", "SNOOP DOGG", "LUDACRIS", "DR DRE", "NAS", "TUPAC SHAKUR", "TYGA", "EMINEM"];
 var winCount = 0;
 
 var artist = "";
@@ -17,22 +17,19 @@ var youtubeTags =
     "ASAP ROCKY": "7EmGuzoNJYc",
     "KANYE WEST": "Qci1KpwwJ-s",
     "MEEK MILL": "J03cag5Lf4s",
-    "MIKE JONES": "x6O59VnvsMY", 
-    "CHRIS BROWN": "uRljCiZIios",
+    "MIKE JONES": "U-krqF1DVUg", 
+    "CHRIS BROWN": "KZdwPP1NWPo",
      "BUSTA RHYMES": "lJg1rT_-BIc",
      "LIL WAYNE": "p8Z4BZenHG4", 
-     "EMINEM": "49rraTkHFeI",
-    "SNOOP DOGG": "0vhnncsYNF8" ,
+    "SNOOP DOGG": "kI-o24BpKE0" ,
      "LUDACRIS": "KvP7aDJHMog",
-    "DR DRE": "jiKiAjm83XA",
-     "NAS": "VbHvrw5u3Fc", 
-     "NICKI MINAJ": "qxQHC8lu9T4", 
-     "TUPAC SHAKUR": "UsE3fVEbuo8", 
-     "TYGA" : "VXXHlsoBS2k"
+    "DR DRE": "dA4GXRU1SKA",
+     "NAS": "QNuMwkipz6M", 
+     "TUPAC SHAKUR": "j76R9UTlglA", 
+     "TYGA" : "VXXHlsoBS2k",
+     "EMINEM" : "Dn3qfGz_Yq8"
 }
 
-
-//function RunGame() {
 // get next artist name
 function RunGame() {
     gameIsRunning = true; 
@@ -40,6 +37,7 @@ function RunGame() {
     container[0].style.display = "block";
     var startButton = document.getElementById("start-button");
     startButton.innerText = "Play Again";
+    
     artist = artists[Math.floor(Math.random() * artists.length)];
     hangmanString(artist);
     
@@ -62,8 +60,6 @@ function RunGame() {
     wrongInput.innerHTML = ""; 
 }
 
-
-//}
 
 // fuction to makes artist string hangman-playable. 
 // ex) artistLongString = Meek Mill -   M E E K  M I L L
@@ -133,7 +129,7 @@ function displayEndResults(artist) {
     var youtube = document.getElementById("youtube");
     youtube.style.display = "block";
     var video = document.getElementById("iframe-id");
-    video.src = "https://www.youtube.com/embed/" + youtubeTags[artist] + "?start=55&autoplay=1";
+    video.src = "https://www.youtube.com/embed/" + youtubeTags[artist] + "?start=60&autoplay=1";
 
 }
 
